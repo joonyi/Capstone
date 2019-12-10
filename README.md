@@ -20,13 +20,15 @@ python generate-stages.py  # Generate stages data, requires random name generati
 python upload-stages.py  # Upload stages data
 ```
 ## 3. Generate Statistics
-django-job-stat/JobMatch/README.md
+More about working with django in django-job-stat/JobMatch/README.md
+
 | Feature | Url |
 | ------ | ------ |
 | Display resumes database | http://localhost:8000/api/resumes/ |
 | Display resumes statistic | http://localhost:8000/api/resumes/stat |
 | Display stages database | http://localhost:8000/api/stages/ |
 | Display stages statistic | http://localhost:8000/api/stages/stat |
+
 #### Resume Statistics
 - Top five skills, locations, languages, certifications, publications, honors, education in Jobhax database
 - Top five attributes from a specific company
