@@ -20,6 +20,7 @@ python generate-stages.py  # Generate stages data, requires random name generati
 python upload-stages.py  # Upload stages data
 ```
 ## 3. Generate Statistics
+<<<<<<< HEAD
 More about working with django in django-job-stat/JobMatch/README.md
 
 | Feature | Url |
