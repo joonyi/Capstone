@@ -243,6 +243,9 @@ def parseResume(path):
 
 if __name__ == "__main__":
     resumes = glob("resumes/**/*.pdf", recursive=True)
+    if not resumes:
+        print("No resume found!")
+        exit()
 
     filename = 'resume_data.json'
     open(filename, "w").close()  # clean the file
