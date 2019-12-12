@@ -1,6 +1,7 @@
 # Capstone Project
+https://github.com/joonyi/Capstone
 
-## 1. Parse Resume
+## 1. Parse Resume (parse-resume/)
 Parse the LinkedIn resumes and the result will be saved to
 - parse-resumes/
 - upload-db/
@@ -9,7 +10,7 @@ Parse the LinkedIn resumes and the result will be saved to
 python parse-resume.py
 ```
 
-## 2. Upload into Database
+## 2. Upload into Database (upload-db/)
 Upload the output of parse resume into database
 ```python
 python upload-resumes.py
@@ -19,9 +20,11 @@ Stages data are randomly generated. Here is a [random name generation website](h
 python generate-stages.py  # Generate stages data, requires random name generation
 python upload-stages.py  # Upload stages data
 ```
-## 3. Generate Statistics
-<<<<<<< HEAD
-More about working with django in django-job-stat/JobMatch/README.md
+## 3. Generate Statistics (django-job-stat/JobMatch/)
+
+More on working with Django and postgres db in django-job-stat/JobMatch/README.md
+
+After starting Django, go to urls below to display the statistics
 
 | Feature | Url |
 | ------ | ------ |
@@ -36,7 +39,7 @@ More about working with django in django-job-stat/JobMatch/README.md
 - Top five companies recruiting from Jobhax
 - Top five positions recruiting from Jobhax
 
-## 4. Learn and Predict Job Match
+## 4. Learn and Predict Job Match (job-match/)
 First, generate train and test data from the whole dataset. To avoid confusion of giving input, company name and portion of learning data is hardcoded. For demonstration, company is Google (other possible names are amazon, apple, facebook, google, salesforce), training size is 0.9
 ```python
 python generate-train-test.py
