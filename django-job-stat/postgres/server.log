@@ -1,0 +1,22 @@
+2019-12-10 20:53:52.318 PST [10012] LOG:  listening on IPv6 address "::1", port 5432
+2019-12-10 20:53:52.319 PST [10012] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-12-10 20:53:52.452 PST [8252] LOG:  database system was shut down at 2019-12-10 20:53:21 PST
+2019-12-10 20:53:52.630 PST [10012] LOG:  database system is ready to accept connections
+2019-12-10 20:53:56.797 PST [6428] FATAL:  database "Rain" does not exist
+2019-12-10 20:54:32.506 PST [17364] ERROR:  database "jobhaxdb" already exists
+2019-12-10 20:54:32.506 PST [17364] STATEMENT:  CREATE DATABASE jobhaxdb WITH OWNER 'jobhaxdbuser' ENCODING 'UTF8' TEMPLATE=template0;
+2019-12-10 20:55:11.081 PST [15804] ERROR:  role "jobhaxdbuser" already exists
+2019-12-10 20:55:11.081 PST [15804] STATEMENT:  CREATE USER jobhaxdbuser WITH PASSWORD '123456';
+2019-12-10 20:57:59.188 PST [16212] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2019-12-10 20:59:00.745 PST [15508] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2019-12-10 20:59:07.283 PST [10012] LOG:  worker process: logical replication launcher (PID 8380) was terminated by exception 0xC000013A
+2019-12-10 20:59:07.283 PST [10012] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2019-12-10 20:59:07.283 PST [10012] LOG:  terminating any other active server processes
+2019-12-10 20:59:07.285 PST [15296] WARNING:  terminating connection because of crash of another server process
+2019-12-10 20:59:07.285 PST [15296] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2019-12-10 20:59:07.285 PST [15296] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2019-12-10 20:59:07.286 PST [10012] LOG:  statistics collector process (PID 3028) was terminated by exception 0xC000013A
+2019-12-10 20:59:07.286 PST [10012] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+^C

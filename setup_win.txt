@@ -1,0 +1,35 @@
+# Set Postgres
+initdb postgres
+pg_ctl -D postgres -l postgres/server.log start
+
+# Create db user for windows
+createdb
+psql --command="CREATE USER jobhaxdbuser WITH PASSWORD '123456';"
+psql --command="CREATE DATABASE jobhaxdb WITH OWNER 'jobhaxdbuser';"
+psql --command="CREATE DATABASE jobhaxdb WITH OWNER 'jobhaxdbuser' ENCODING 'UTF8' TEMPLATE=template0;"
+psql --command="ALTER USER jobhaxdbuser CREATEDB;"
+
+
+# Install python dependencies for application:
+pip3 install -r requirements.txt
+
+# Migrate application data changes to postgres:
+python manage.py makemigrations
+python manage.py migrate
+
+# Create superuser for admin panel:
+python manage.py createsuperuser
+
+===================================================
+# if postgres not started
+pg_ctl -D postgres -l postgres/server.log start
+
+# Start
+start python manage.py runserver 0.0.0.0:8000
+
+python manage.py process_tasks
+
+==========================================
+# Few debugging command
+psql -l # display running database
+psql --command="DROP DATABASE jobhaxdb;"  # drop db if you want to restart
